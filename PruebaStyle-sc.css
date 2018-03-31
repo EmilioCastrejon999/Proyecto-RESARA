@@ -1,0 +1,156 @@
+body{
+  background-color: white;
+  font-family: helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12pt;
+
+  width: auto;
+  color: #137ca5;
+}
+
+p{
+  text-align: justify;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding:0;
+  box-sizing:border-box;
+
+  font-family:  helvetica;
+  font-style: lighter;
+  font-weight: 100;
+  font-size: 15pt;
+}
+
+img {
+  height: auto;
+  /* Magic! */
+  width: 100%;
+  max-width:100%;
+  max-height:100%;
+}
+
+h1{
+  font-family: helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25pt;
+  color: white;
+  width: auto;
+  text-align: center;
+  margin-right: 300px
+  background: blue;
+}
+
+h3{
+text-align: center;
+font-family:  helvetica;
+font-style: lighter;
+font-weight: 100;
+font-size: 15pt;
+position:fixed;
+top:133;
+
+}
+
+body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.tab {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: GREEN;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:40px;
+
+  display: flexgr;
+  align-items: center;
+  justify-content: center;
+
+/*
+display: flex;
+
+ */
+}
+
+/*Cambia la altura del titulo con respecto a la barra*/
+.tabcontent{
+  padding:20px;
+  margin-top:100px;
+  height:auto;
+}
+
+/* Style the buttons inside the tab*/
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: 0.3s;
+  font-size: 13px;
+  font-weight: lighter;
+  color: #f5f5f5;
+  outline: none;
+
+/*
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  */
+}
+
+.wrapperDOSCOLDIV {
+  display: grid;
+  border-style: inset;
+  border-radius: 5;
+  border-color: RED;
+  scrolling: 1;
+  grid-template-columns: repeat(2, 1fr );
+  grid-template-rows: repeat(2, 1fr)
+  Grid-auto-rows: minmax(100px, auto);}
+
+
+.centrado {
+	position: absolute;
+	top: 50%; left: 0%;
+	width: 70%; height: 70%;
+  scrolling="1";
+
+	  }
+    .centrado2 {
+    	position: absolute;
+    	top: 0%; left: 70%;
+    	width: 100%; height: 70%;
+    	  }
+
+    .columna{
+      overflow:scroll;
+      width: 500px;
+      height: 500px;
+
+.wrapperTRESCOLDIV {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-rows: repeat(2, 1FR)
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color: #999999;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: GREEN;
+  border-radius: 15;
+  background-color: white;
+}
