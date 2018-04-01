@@ -1,5 +1,3 @@
-
-
 if ( checkCookie("attempt")  == false){
 setCookie("attempt", 3, 0.0007);
 }
@@ -11,6 +9,11 @@ var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 
 if ( username == "Formget" && password == "formget#123"){
+
+  if (checkCookie("Usuario")== false){
+    setCookie("Usuario" , username);
+  }
+
 alert ("Login successfully");
 window.location = "menu.html"; // Redirecting to other page.
 return false;
@@ -36,10 +39,16 @@ else {
 }
 
 function setCookie(cname, cvalue, exdays) {
+  if (exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  else {
+    document.cookie = cname + "=" + cvalue + ";path=/";
+  }
+
 }
 
 function getCookie(cname) {
