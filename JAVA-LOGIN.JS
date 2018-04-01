@@ -8,7 +8,26 @@ function validate(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 
-if ( username == "Formget" && password == "formget#123"){
+var url = 'http://opindes.com/login.php/?usuario=' + username + "&codigo=" +password;
+//creat and AJAX request
+var xhttp = new XMLHttpRequest();
+//establish (protocol, url, async) parameters
+xhttp.open("GET", url, true);
+xhttp.crossDomain = true;
+//send the request
+xhttp.send();
+
+//handle the response
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      ValidateResponse(this.responseText);
+    }
+  };
+}
+
+function ValidateResponse(response) {
+
+if (response == "Existe"){
 
   if (checkCookie("Usuario")== false){
     setCookie("Usuario" , username);
